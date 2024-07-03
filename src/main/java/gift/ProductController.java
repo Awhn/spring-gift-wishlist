@@ -18,8 +18,8 @@ public class ProductController {
     }
 
     @GetMapping(apipath)
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    public ResponseEntity<List<Product>> getAllProducts() {
+        return ResponseEntity.ok(productService.getAllProducts());
     }
 
     @GetMapping(apipath + "/{id}")
